@@ -37,6 +37,19 @@ AI-assisted.
 - **Team modifications:** _TODO_
 - **Lessons learned / limitations:** _TODO_
 
+### 3. Layer diagram fixes and class diagram
+
+- **Task:** Bring the layer diagram in line with section 4.2 (dependency arrows, layer color legend, ports and
+  adapters) and draft the class diagram in draw.io.
+- **Tool:** Claude Code (Claude Opus 5.5).
+- **Prompt (faithful paraphrase):** "Fix it and make me the class diagram in draw.io that you offered. Also tell
+  me how to view the .drawio file in the browser."
+- **Result:** Layer diagram with dependency arrows, a layer legend and adapter → port links. Class diagram
+  draft with six pages (geometry and board, engine, variability contracts, variants, use cases, adapters),
+  UML template notation and `«bind»` relationships, exported to SVG with draw.io's own renderer.
+- **Team modifications:** _TODO_
+- **Lessons learned / limitations:** _TODO_
+
 ## Critical evaluation
 
 - **Approximate share of AI-assisted code:** _TODO_
