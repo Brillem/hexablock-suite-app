@@ -32,8 +32,28 @@ always point inward.
 
 ![Clean Architecture layers](docs/diagrams/clean-architecture.svg)
 
-Editable source: [`docs/diagrams/clean-architecture.drawio`](docs/diagrams/clean-architecture.drawio) (open it with
-[diagrams.net](https://app.diagrams.net) or the draw.io VS Code extension).
+Editable source: [`docs/diagrams/clean-architecture.drawio`](docs/diagrams/clean-architecture.drawio) —
+[open in diagrams.net](https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FBrillem%2Fhexablock-suite-app%2Fmain%2Fdocs%2Fdiagrams%2Fclean-architecture.drawio).
+
+### Class diagram
+
+One class diagram split into six pages, one per area. The header color shows each class's layer, stereotypes show
+the design patterns, the dashed box on a class's top-right corner lists its type parameters (UML template notation),
+and `«bind»` arrows show how each variant instantiates them.
+
+| Page | Contents |
+|------|----------|
+| [1 · Geometry and board](docs/diagrams/class/01-domain-geometry-board.svg) | `Coord`, `Geometry<C>`, `Board<C,T>`, `Shape<C>`, `Piece<C>`, `Level<C>` |
+| [2 · Engine](docs/diagrams/class/02-domain-engine.svg) | `GameEngine<C,T,M,S>`, lifecycle states, event bus, move history |
+| [3 · Variability contracts](docs/diagrams/class/03-domain-contracts.svg) | `GameRules`, `TurnRules`, decorators, piece sources, scoring, progress, capabilities |
+| [4 · Variants](docs/diagrams/class/04-domain-variants.svg) | `VariantFactory` and how the four variants bind the engine's type parameters |
+| [5 · Use cases](docs/diagrams/class/05-application.svg) | Generic use cases, ports, AOP aspects |
+| [6 · Interface adapters](docs/diagrams/class/06-adapters.svg) | ViewModels, repository adapters, mappers, facade |
+
+![Class diagram — variants](docs/diagrams/class/04-domain-variants.svg)
+
+Editable source: [`docs/diagrams/class-diagram.drawio`](docs/diagrams/class-diagram.drawio) —
+[open in diagrams.net](https://app.diagrams.net/#Uhttps%3A%2F%2Fraw.githubusercontent.com%2FBrillem%2Fhexablock-suite-app%2Fmain%2Fdocs%2Fdiagrams%2Fclass-diagram.drawio).
 
 ## Generic Engine
 
