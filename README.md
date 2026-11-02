@@ -1,7 +1,8 @@
 # HexaBlock Suite — Game Client
 
+[![CI](https://github.com/Brillem/hexablock-suite-app/actions/workflows/ci.yml/badge.svg)](https://github.com/Brillem/hexablock-suite-app/actions/workflows/ci.yml)
 ![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-<!-- TODO: add CI, unit, integration and e2e test badges once the GitHub Actions workflow exists. -->
+<!-- TODO: add unit, integration and e2e test badges once those suites exist. -->
 
 > Four games, one engine.
 
@@ -78,7 +79,10 @@ _TODO: describe the implemented aspects and the SOLID-based strategy (decorators
 
 ### Prerequisites
 
-- Flutter SDK (stable channel)
+- Flutter SDK 3.47.9 (stable channel), the same version CI uses
+- Android Studio (Android SDK) and/or Xcode (iOS) to run the app on a device or emulator
+
+The app targets Android and iOS. Application ID: `com.hexablocksuite.hexablock_suite`.
 
 ### Installation
 
