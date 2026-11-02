@@ -8,7 +8,7 @@ AI-assisted.
 
 | Tool | Model / version | Role in the workflow |
 |------|-----------------|----------------------|
-| Claude Code | Claude Opus 5.5 | Repository scaffolding and documentation templates |
+| Claude Code | Claude Opus 5.5 | Repository scaffolding, documentation templates and architecture diagram drafts |
 
 ## Usage log
 
@@ -21,6 +21,19 @@ AI-assisted.
   the backend."
 - **Result:** Initial README with the mandatory sections as placeholders, MIT license, this file,
   `docs/EXTENSIBILITY.md` placeholder and pull request template.
+- **Team modifications:** _TODO_
+- **Lessons learned / limitations:** _TODO_
+
+### 2. Clean Architecture layer diagram
+
+- **Task:** Draft the Clean Architecture layer diagram for the game client.
+- **Tool:** Claude Code (Claude Opus 5.5).
+- **Prompt (faithful paraphrase):** "Start with the layer diagram. Keep generics in mind (for example, the
+  geometry could change from hexagon to another shape and the logic must still work), the design
+  patterns, and Clean Architecture. Give it to me in draw.io."
+- **Result:** Draft of four nested layers with the generic engine in the domain, a coordinate type
+  parameter `C` that makes the cell geometry swappable, and the GoF patterns tagged per component.
+  Delivered as `docs/diagrams/clean-architecture.drawio` plus an SVG export.
 - **Team modifications:** _TODO_
 - **Lessons learned / limitations:** _TODO_
 

@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1094" viewBox="0 0 1200 1094" role="img">
+<title>HexaBlock Suite — Clean Architecture layers</title>
+<rect width="1200" height="1094" fill="#FFFFFF"/>
+<text x="20" y="30" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="600" fill="#2C2C2A">HexaBlock Suite — Clean Architecture (game client)</text>
+<rect x="20" y="46" width="278" height="20" rx="4" fill="#FFFFFF" stroke="#B4B2A9"/>
+<text x="159" y="56" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#2C2C2A">Dependencies point inward: 4 → 3 → 2 → 1</text>
+<rect x="306" y="46" width="80" height="20" rx="4" fill="#FAEEDA"/>
+<text x="346" y="56" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Creational</text>
+<rect x="394" y="46" width="80" height="20" rx="4" fill="#EAF3DE"/>
+<text x="434" y="56" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Structural</text>
+<rect x="482" y="46" width="80" height="20" rx="4" fill="#E6F1FB"/>
+<text x="522" y="56" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Behavioral</text>
+<rect x="570" y="46" width="150" height="20" rx="4" fill="#FFFFFF" stroke="#888780" stroke-dasharray="4 3"/>
+<text x="645" y="56" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5F5E5A">Dashed = future extension</text>
+<rect x="20" y="80" width="1160" height="994" rx="14" fill="#F1EFE8" stroke="#888780" stroke-width="1.2"/>
+<text x="38" y="108" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#444441">4 · Frameworks &amp; drivers</text>
+<text x="266" y="108" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#444441" opacity="0.8">Flutter, storage, network — replaceable details</text>
+<rect x="38" y="132" width="143.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="48" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Screens &amp; widgets</text>
+<rect x="189.25" y="132" width="136" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="199.25" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">BoardWidget&lt;C,T&gt;</text>
+<rect x="333.25" y="132" width="190.3" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="343.25" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">CellPainter&lt;T&gt;</text>
+<rect x="450.75" y="137" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="482.15" y="145" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="531.55" y="132" width="277.3" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="541.55" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">CoordLayout&lt;C&gt; → HexLayout</text>
+<rect x="736.05" y="137" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="767.4499999999999" y="145" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="816.8499999999999" y="132" width="107" height="26" rx="6" fill="#FFFFFF" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="826.8499999999999" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#5F5E5A">SquareLayout</text>
+<rect x="931.8499999999999" y="132" width="114.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="941.8499999999999" y="145" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Hive local DB</text>
+<rect x="38" y="166" width="157.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="48" y="179" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Dio HTTP → Node API</text>
+<rect x="203.75" y="166" width="255" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="213.75" y="179" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">AudioManager</text>
+<rect x="306.75" y="171" width="142" height="16" rx="3" fill="#FAEEDA"/>
+<text x="377.75" y="179" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Singleton (DI scope)</text>
+<rect x="466.75" y="166" width="186.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="476.75" y="179" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">get_it composition root</text>
+<rect x="661.5" y="166" width="128.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="671.5" y="179" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">VariantRegistry</text>
+<rect x="42" y="210" width="1116" height="842" rx="14" fill="#E1F5EE" stroke="#0F6E56" stroke-width="1.2"/>
+<text x="60" y="238" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#085041">3 · Interface adapters</text>
+<text x="270" y="238" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#085041" opacity="0.8">ViewModels, repository implementations, mappers</text>
+<rect x="60" y="262" width="248.3" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="70" y="275" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GameViewModel&lt;C,T,M,S&gt;</text>
+<rect x="235.5" y="267" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="266.9" y="275" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Observer</text>
+<rect x="316.3" y="262" width="114.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="326.3" y="275" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HomeViewModel</text>
+<rect x="438.55" y="262" width="143.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="448.55" y="275" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">SettingsViewModel</text>
+<rect x="589.8" y="262" width="248.95" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="599.8" y="275" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LocalProgressRepository</text>
+<rect x="772.55" y="267" width="56.199999999999996" height="16" rx="3" fill="#EAF3DE"/>
+<text x="800.65" y="275" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Adapter</text>
+<rect x="846.75" y="262" width="165" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="856.75" y="275" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">AssetLevelRepository</text>
+<rect x="60" y="296" width="234.45" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="70" y="309" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ApiLeaderboardGateway</text>
+<rect x="228.25" y="301" width="56.199999999999996" height="16" rx="3" fill="#EAF3DE"/>
+<text x="256.35" y="309" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Adapter</text>
+<rect x="302.45" y="296" width="128.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="312.45" y="309" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LevelJsonMapper</text>
+<rect x="439.2" y="296" width="121.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="449.2" y="309" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">StateMapper&lt;S&gt;</text>
+<rect x="568.7" y="296" width="198.85" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="578.7" y="309" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GameServiceFacade</text>
+<rect x="707.95" y="301" width="49.599999999999994" height="16" rx="3" fill="#EAF3DE"/>
+<text x="732.75" y="309" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Facade</text>
+<rect x="64" y="340" width="1072" height="690" rx="14" fill="#EEEDFE" stroke="#534AB7" stroke-width="1.2"/>
+<text x="82" y="368" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#3C3489">2 · Use cases</text>
+<text x="211" y="368" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3C3489" opacity="0.8">generic application logic — one use case per action, never per variant</text>
+<rect x="82" y="392" width="107" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="92" y="405" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">UseCase&lt;I,O&gt;</text>
+<rect x="197" y="392" width="201.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="207" y="405" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">StartGameUseCase&lt;C,T,M,S&gt;</text>
+<rect x="406.25" y="392" width="201.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="416.25" y="405" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ApplyMoveUseCase&lt;C,T,M,S&gt;</text>
+<rect x="615.5" y="392" width="194" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="625.5" y="405" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">UndoMoveUseCase&lt;C,T,M,S&gt;</text>
+<rect x="817.5" y="392" width="136" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="827.5" y="405" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LoadLevelUseCase</text>
+<rect x="82" y="426" width="157.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="92" y="439" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">SaveProgressUseCase</text>
+<rect x="247.75" y="426" width="179.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="257.75" y="439" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">SyncLeaderboardUseCase</text>
+<rect x="435.25" y="426" width="169.2" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="445.25" y="439" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LevelBuilder</text>
+<rect x="538.25" y="431" width="56.199999999999996" height="16" rx="3" fill="#FAEEDA"/>
+<text x="566.35" y="439" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Builder</text>
+<text x="82" y="470" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3C3489">Ports (implemented in layer 3)</text>
+<rect x="82" y="484" width="150.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="92" y="497" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ProgressRepository</text>
+<rect x="240.5" y="484" width="128.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="250.5" y="497" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LevelRepository</text>
+<rect x="377.25" y="484" width="150.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="387.25" y="497" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LeaderboardGateway</text>
+<rect x="535.75" y="484" width="99.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="545.75" y="497" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">EventLogger</text>
+<text x="82" y="528" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#3C3489">AOP aspects — wrap any UseCase&lt;I,O&gt;, so they apply to all four variants</text>
+<rect x="82" y="542" width="189.65" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="92" y="555" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">LoggingAspect</text>
+<rect x="192.25" y="547" width="69.4" height="16" rx="3" fill="#EAF3DE"/>
+<text x="226.95" y="555" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Decorator</text>
+<rect x="279.65" y="542" width="182.4" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="289.65" y="555" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">TimingAspect</text>
+<rect x="382.65" y="547" width="69.4" height="16" rx="3" fill="#EAF3DE"/>
+<text x="417.34999999999997" y="555" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Decorator</text>
+<rect x="470.04999999999995" y="542" width="233.15" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="480.04999999999995" y="555" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ErrorHandlingAspect</text>
+<rect x="623.8" y="547" width="69.4" height="16" rx="3" fill="#EAF3DE"/>
+<text x="658.5" y="555" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Decorator</text>
+<rect x="86" y="586" width="1028" height="422" rx="14" fill="#FAECE7" stroke="#993C1D" stroke-width="1.2"/>
+<text x="104" y="614" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="600" fill="#712B13">1 · Entities — generic engine</text>
+<text x="377" y="614" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13" opacity="0.8">pure Dart, no Flutter imports</text>
+<text x="104" y="650" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13">Geometry — the cell shape is a type parameter (C)</text>
+<rect x="104" y="664" width="56.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="677" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Coord</text>
+<rect x="168.25" y="664" width="201.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="178.25" y="677" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Geometry&lt;C extends Coord&gt;</text>
+<rect x="377.5" y="664" width="179.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="387.5" y="677" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HexCoord + HexGeometry</text>
+<rect x="565" y="664" width="223" height="26" rx="6" fill="#FFFFFF" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="575" y="677" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#5F5E5A">SquareCoord + SquareGeometry</text>
+<rect x="796" y="664" width="114.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="806" y="677" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">BoardShape&lt;C&gt;</text>
+<text x="104" y="708" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13">Board and pieces</text>
+<rect x="104" y="722" width="167.9" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="735" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Board&lt;C,T&gt;</text>
+<rect x="192.5" y="727" width="69.4" height="16" rx="3" fill="#FAEEDA"/>
+<text x="227.2" y="735" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Prototype</text>
+<rect x="279.9" y="722" width="212.05" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="289.9" y="735" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">BoardTraversal&lt;C&gt;</text>
+<rect x="419.15" y="727" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="450.54999999999995" y="735" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Iterator</text>
+<rect x="499.95" y="722" width="228.8" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="509.95" y="735" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Piece&lt;C&gt;</text>
+<rect x="573.95" y="727" width="69.4" height="16" rx="3" fill="#EAF3DE"/>
+<text x="608.6500000000001" y="735" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Composite</text>
+<rect x="649.35" y="727" width="69.4" height="16" rx="3" fill="#FAEEDA"/>
+<text x="684.0500000000001" y="735" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Prototype</text>
+<text x="104" y="766" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13">Engine</text>
+<rect x="104" y="780" width="272.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="793" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GameEngine&lt;C,T,M,S&gt;</text>
+<rect x="257.75" y="785" width="109" height="16" rx="3" fill="#E6F1FB"/>
+<text x="312.25" y="793" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Template Method</text>
+<rect x="384.75" y="780" width="134.25" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="394.75" y="793" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GamePhase</text>
+<rect x="466" y="785" width="43" height="16" rx="3" fill="#E6F1FB"/>
+<text x="487.5" y="793" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">State</text>
+<rect x="527" y="780" width="183.05" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="537" y="793" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GameEvent bus</text>
+<rect x="637.25" y="785" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="668.65" y="793" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Observer</text>
+<rect x="718.05" y="780" width="161.95" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="728.05" y="793" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">MoveCommand</text>
+<rect x="813.8" y="785" width="56.199999999999996" height="16" rx="3" fill="#E6F1FB"/>
+<text x="841.9" y="793" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Command</text>
+<text x="104" y="824" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13">Variability contracts</text>
+<rect x="104" y="838" width="219.3" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="851" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">GameRules&lt;C,T,M,S&gt;</text>
+<rect x="250.5" y="843" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="281.9" y="851" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="331.3" y="838" width="190.3" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="341.3" y="851" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">PieceSource&lt;P&gt;</text>
+<rect x="448.8" y="843" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="480.2" y="851" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="529.6" y="838" width="204.8" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="539.6" y="851" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ScoringPolicy&lt;S&gt;</text>
+<rect x="661.6" y="843" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="693" y="851" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="742.4000000000001" y="838" width="183.05" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="752.4000000000001" y="851" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">ProgressModel</text>
+<rect x="852.6500000000001" y="843" width="62.8" height="16" rx="3" fill="#E6F1FB"/>
+<text x="884.0500000000001" y="851" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#0C447C">Strategy</text>
+<rect x="104" y="872" width="196.9" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="885" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">RulesDecorator</text>
+<rect x="221.5" y="877" width="69.4" height="16" rx="3" fill="#EAF3DE"/>
+<text x="256.2" y="885" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#27500A">Decorator</text>
+<rect x="308.9" y="872" width="244.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="318.9" y="885" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Undoable · Timed · RandomSeeded</text>
+<rect x="561.65" y="872" width="107" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="571.65" y="885" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">Mergeable&lt;T&gt;</text>
+<text x="104" y="916" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#712B13">Variants — one factory per variant</text>
+<rect x="104" y="930" width="308.35" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="114" y="943" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">VariantFactory&lt;C,T,M,S&gt;</text>
+<rect x="286.75" y="935" width="115.6" height="16" rx="3" fill="#FAEEDA"/>
+<text x="344.55" y="943" text-anchor="middle" dominant-baseline="central" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#633806">Abstract Factory</text>
+<rect x="420.35" y="930" width="136" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="430.35" y="943" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HexaLinesFactory</text>
+<rect x="564.35" y="930" width="121.5" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="574.35" y="943" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HexaFitFactory</text>
+<rect x="693.85" y="930" width="128.75" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="703.85" y="943" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HexaSortFactory</text>
+<rect x="830.6" y="930" width="136" height="26" rx="6" fill="#FFFFFF" stroke="#B4B2A9" stroke-width="1"/>
+<text x="840.6" y="943" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#2C2C2A">HexaMergeFactory</text>
+<rect x="104" y="964" width="128.75" height="26" rx="6" fill="#FFFFFF" stroke="#888780" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="114" y="977" dominant-baseline="central" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="12" fill="#5F5E5A">HexaFillFactory</text>
+</svg>
