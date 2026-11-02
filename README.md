@@ -30,7 +30,10 @@ always point inward.
 | 3. Interface Adapters | Presenters / ViewModels, repository implementations, mappers |
 | 4. Frameworks & Drivers | Flutter UI, local storage, HTTP client |
 
-_TODO: embed the Clean Architecture layer diagram (`docs/diagrams/`)._
+![Clean Architecture layers](docs/diagrams/clean-architecture.svg)
+
+Editable source: [`docs/diagrams/clean-architecture.drawio`](docs/diagrams/clean-architecture.drawio) (open it with
+[diagrams.net](https://app.diagrams.net) or the draw.io VS Code extension).
 
 ## Generic Engine
 
