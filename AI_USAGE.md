@@ -9,6 +9,7 @@ AI-assisted.
 | Tool | Model / version | Role in the workflow |
 |------|-----------------|----------------------|
 | Claude Code | Claude Opus 5.5 | Repository scaffolding, documentation templates and architecture diagram drafts |
+| OpenAI Codex | GPT-6.2 Astra | Project coordination, agent configuration and AI usage review |
 
 ## Usage log
 
@@ -49,6 +50,16 @@ AI-assisted.
   UML template notation and `«bind»` relationships, exported to SVG with draw.io's own renderer.
 - **Team modifications:** _TODO_
 - **Lessons learned / limitations:** _TODO_
+
+### 4. Configure project agents and the review workflow
+
+- **Date / commit:** Setup on 2026-11-20. Approved commit message: `chore(agents): configure project roles and review workflow`.
+- **Task:** Define how the team approves, implements, reviews and records work on the game core.
+- **Tool:** OpenAI Codex (GPT-6.2 Astra).
+- **Prompt (faithful paraphrase):** Set up agents for design and draw.io, implementation and unit tests, and review and AI usage logging. Discuss changes with me first. Follow the instructor's clarification on design patterns, use the official diagram I supplied and keep my teammate's earlier diagram.
+- **Result:** Codex created `AGENTS.md` and three project profiles under `.codex/agents/`. The team reviews each delivery before the reviewer records it. The coordinator then proposes a commit message and agrees on a branch with the team.
+- **Team decisions and revisions:** The team identified `../Solución HexaSuite.drawio` as the official editable source and kept `docs/diagrams/class-diagram.drawio` as a historical reference. The instructor requires SOLID, Strategy and Abstract Factory and treats the other patterns as optional. The user accepted the initial setup, then requested English for repository content and Spanish for conversations. Codex translated the agreements and profiles and renamed the three agents in English. The user accepted the English revision and approved the commit. On 2026-11-21, the user chose to commit this setup directly to local `main` because it precedes work on game logic. This decision applies to the initial agent configuration.
+- **Verification and lessons:** The profiles passed TOML parsing. Git listed the shared instructions and all three profiles. The official diagram lives outside the client repository, so the team must review its edits separately from the Git diff.
 
 ## Critical evaluation
 
