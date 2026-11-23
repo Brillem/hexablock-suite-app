@@ -61,6 +61,16 @@ AI-assisted.
 - **Team decisions and revisions:** The team identified `../Solución HexaSuite.drawio` as the official editable source and kept `docs/diagrams/class-diagram.drawio` as a historical reference. The instructor requires SOLID, Strategy and Abstract Factory and treats the other patterns as optional. The user accepted the initial setup, then requested English for repository content and Spanish for conversations. Codex translated the agreements and profiles and renamed the three agents in English. The user accepted the English revision and approved the commit. On 2026-11-21, the user chose to commit this setup directly to local `main` because it precedes work on game logic. This decision applies to the initial agent configuration.
 - **Verification and lessons:** The profiles passed TOML parsing. Git listed the shared instructions and all three profiles. The official diagram lives outside the client repository, so the team must review its edits separately from the Git diff.
 
+### 5. Move the official diagram into the repository and restore the Flutter workspace
+
+- **Date / commit:** 2026-11-22. `docs(architecture): add the official class diagram and record workspace setup`.
+- **Task and tool:** OpenAI Codex helped move the editable diagram and diagnose two local environment issues reported during review.
+- **Prompt (faithful English paraphrase of successive requests):** Move the official draw.io file into the repository's docs folder and update the agent instructions. VS Code is reporting an error on startup. Install the matching Flutter SDK. Another error remains in the Android project. Record the full task and commit it.
+- **Diagram delivery:** Moved `../Solución HexaSuite.drawio` to `docs/Solución HexaSuite.drawio`. Updated `AGENTS.md` with the new path and changed `.codex/agents/designer.toml` to refer to those shared instructions. The teammate's earlier diagram remains at `docs/diagrams/class-diagram.drawio`. The XML parsed successfully and the SHA-256 digest matched the original.
+- **Flutter diagnosis and resolution:** VS Code selected Flutter 3.35.1 with Dart 3.9.0. The project requires Dart `^3.13.7`. The user approved installing Flutter 3.47.9, the version pinned in CI, alongside the existing SDK. Codex verified the official archive checksum and configured a separate local VS Code workspace. With Dart 3.13.7, `flutter pub get --enforce-lockfile` succeeded.
+- **Android diagnosis and resolution:** After dependency resolution succeeded, the user reported a remaining Gradle error. The Java extension log traced the line 19 diagnostic to an earlier failed installation of Android NDK 28.2.13676358. That version was already installed. Codex resynchronized the project and reloaded VS Code. Gradle completed `:app:help` and the editor showed zero errors and warnings.
+- **Review and limitations:** The user accepted the result and requested this entry. A TLS failure during a Flutter tag lookup and restricted cache access complicated local verification. The SDK and editor workspace are machine-local. Verification covered dependency resolution, Gradle configuration and editor diagnostics. An APK build and device run were outside this check.
+
 ## Critical evaluation
 
 - **Approximate share of AI-assisted code:** _TODO_

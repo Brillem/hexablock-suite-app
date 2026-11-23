@@ -6,7 +6,7 @@ The team owns the design. Discuss the work with the user in Spanish. Write repos
 
 Resolve the following paths from the root of the game client repository, `hexablock-suite-app`.
 
-- **Official editable diagram.** Use `../Solución HexaSuite.drawio` for approved UML edits. It is a local file one directory above the Git repository. Review diagram changes separately in draw.io. A client commit does not capture edits to that file.
+- **Official editable diagram.** Use `docs/Solución HexaSuite.drawio` for approved UML edits. Review the diagram in draw.io and include the editable source in the corresponding commit.
 - **Historical diagram.** Preserve `docs/diagrams/class-diagram.drawio`, an earlier design by a teammate. The team will decide its future. Use the editable source above when the user requests a design change.
 - **Requirements.** Use `../../Proyecto Desarrollo requerimientos.pdf` as the team's initial sketch, especially for use cases. Leave the sketch intact. Consult the relevant section of `../../Enunciado_ProyectoSemestral_HexaBlockSuite_v1.0_2026-10-23.html` as needed. If a source is unavailable in another checkout, request the relevant excerpt.
 - **Design constraints.** The instructor clarified that the design must follow SOLID and use Strategy and Abstract Factory. The other patterns in the assignment are optional. Explain the concrete problem an additional pattern would address before proposing it.
