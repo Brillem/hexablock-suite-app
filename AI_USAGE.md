@@ -84,6 +84,15 @@ AI-assisted.
 - **Follow-up review, 2026-11-24:** The revised diagram uses `RunID` for a single attempt, carries `LevelID` through to `LevelRated`, and passes the context to each state when applying a move. The state interface now accepts the outcome when retrieving the result, but the context still has no parameter for that outcome, and the terminal states have no explicit path to the final context. Looking up player progress across attempts still requires a mode-level query. The level lookup takes both a run and a level identifier, although the level identifier already includes its mode. The generic type annotations noted above are still pending. These are UML findings awaiting team review.
 - **Latest diagram review, 2026-11-24:** All five engine states now receive the outcome and the final context in `getEndGameResult`. The concrete contexts accept the outcome and declare their variant-specific result types. The progress use case and repository both query by player and mode. The progress repository returns `ProgressInfo`. The team chose to specify the return type of `LoadProgressUseCase.execute` later. The final diagram defines `ILevelRepository.load(levelId: LevelID): Level`, so the same level definition can be loaded across attempts. The team deferred the `changeScore` event contract to a separate commit.
 
+### 7. Pass scoring events to `GameRules.changeScore`
+
+- **Date / commit:** 2026-11-25. Commit pending.
+- **Tool and task:** OpenAI Codex updated the scoring contract in `docs/Solución HexaSuite.drawio`.
+- **Prompt (faithful English paraphrase):** Change the scoring method's signature in the diagram. Leave movement and its result for a separate discussion with the team.
+- **Result:** Added `events: GameEvent[]` to `changeScore(context: TContext, events: GameEvent[]): TContext`. This gives the rules both inputs required by `IScorePolicy.calculateScoreDelta`.
+- **Team decision:** The team approved the signature and deferred deciding which component produces each event and what `applyMovement` should return.
+- **Verification:** The saved diagram parsed successfully. Comparing it with the previous version confirmed that the new parameter was the only UML change.
+
 ## Critical evaluation
 
 - **Approximate share of AI-assisted code:** _TODO_
