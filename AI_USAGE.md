@@ -93,6 +93,14 @@ AI-assisted.
 - **Team decision:** The team approved the signature and deferred deciding which component produces each event and what `applyMovement` should return.
 - **Verification:** The saved diagram parsed successfully. Comparing it with the previous version confirmed that the new parameter was the only UML change.
 
+### 8. Build initial boards from levels or seeded generation
+
+- **Date / commit:** 2026-11-25. `docs(architecture): model level and seeded board construction`.
+- **Tool and prompt (faithful English paraphrase):** The team asked OpenAI Codex to adapt the board builder for saved level layouts and random initial boards of a given radius. Use independent UML shapes styled like the existing classes and explain what the seed can reproduce.
+- **Design:** For a level, the factory supplies its shape and initial cell values. For generation, it selects the radius and calls `withGeneratedValues(source, seed)`. The mode-specific `IBoardValueSource` chooses initial values for cells within that shape. Reproducing the same layout requires the same cells, generator configuration and seed. Subsequent piece draws use their own source.
+- **Team revision and review:** The team edited the final diagram before requesting the commit. It declares `IBuilder<TBoard>.build(): TBoard` and `BoardBuilder<TBoard, TCellValue>`, with `TBoard` bounded by `IBoard<TCellValue>`. The concrete build signature still returns `IBoard<TCellValue>`; if it implements the contract for a more specific board type, the return types need to agree.
+- **Verification:** The official draw.io XML parsed successfully. The builder and its interfaces are independent shapes on the main layer. Cell identifiers are unique and parent and connector references resolve. Reproducibility was reviewed at the design level.
+
 ## Critical evaluation
 
 - **Approximate share of AI-assisted code:** _TODO_
