@@ -10,6 +10,7 @@ AI-assisted.
 |------|-----------------|----------------------|
 | Claude Code | Claude Opus 5.5 | Repository scaffolding, documentation templates and architecture diagram drafts |
 | OpenAI Codex | GPT-6.2 Astra | Project coordination, agent configuration and AI usage review |
+| Copilot SDK in VS Code | GPT-6 Luna | Developer tooling and repository workflow |
 
 ## Usage log
 
@@ -111,6 +112,16 @@ AI-assisted.
 - **Diagram delivery:** Renamed `SlideMovement` to `MergeSlideMovement` bound to `number`, `MergeContext` and the new `SlideTile` move (`origin` and `direction`). Updated `MergeResolution`, `MergeFactory`, the generic bindings note and the move proposal note, and added a note explaining the decision. The edit changed the XML text in place to keep existing identifiers and connectors.
 - **Verification:** The XML parsed successfully. The number of overlapping shapes stayed at seven, all pre-existing. The affected classes, the new dependency and the note were inspected in the draw.io viewer.
 - **Open points:** The movement still returns `ResolutionResult`, and `GameRules.applyMovement` still discards the events. The team has not yet agreed on how movement and resolution events are combined.
+
+### 10. Enforce scoped Conventional Commits
+
+- **Date / commit:** 2026-11-27. `chore(ci): enforce scoped Conventional Commits`.
+- **Task and tool:** Configure Commitlint and Husky to validate commit messages and require a scope.
+- **Prompt (faithful paraphrase):** "Install and configure Commitlint and Husky to enforce Conventional Commits. Make the scope mandatory. Record the AI-assisted work, commit the changes and open a pull request following the repository's examples."
+- **Result:** Added Commitlint's CLI and conventional configuration and Husky as development dependencies. The `commit-msg` hook rejects messages without a scope. The `prepare` script installs Husky for each clone. Updated the README with the Node.js 22.12+ prerequisite and hook setup, and ignored `node_modules`.
+- **Team decisions and revisions:** The user asked that scope be mandatory. Scope values remain unrestricted; the conventional configuration supplies the allowed commit types. The installed Commitlint version requires Node.js 22.12 or newer, so the documented prerequisite was corrected from 20+ to 22.12+.
+- **Verification:** `npm install --save-dev @commitlint/cli @commitlint/config-conventional husky` completed and reported zero vulnerabilities. `npm install --offline` completed and ran the Husky `prepare` script. The Git hook accepted `feat(engine): require commit scopes` and rejected `feat: require commit scopes`. `git diff --check` passed. Attempts to run `flutter analyze` and `flutter test --coverage` could not start because `flutter` is not available in the command environment.
+- **Limitations:** Flutter analysis and tests remain unverified in this environment because the Flutter executable is unavailable.
 
 ## Critical evaluation
 

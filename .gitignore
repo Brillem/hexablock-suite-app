@@ -40,3 +40,4 @@ app.*.map.json
 
 # Local tooling
 .codegraph/
+/node_modules/
