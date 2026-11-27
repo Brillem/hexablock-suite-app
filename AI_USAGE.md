@@ -101,6 +101,17 @@ AI-assisted.
 - **Team revision and review:** The initial revision introduced `TBoard`. Review found that the interface promised a specific board subtype while the implementation returned `IBoard<TCellValue>`. The team resolved this by removing `TBoard` and using the cell value type as the sole generic parameter. The saved diagram confirms that `IBuilder<TCellValue>` and `BoardBuilder<TCellValue>` both declare `build(): IBoard<TCellValue>`.
 - **Verification:** The official draw.io XML parsed successfully. The builder and its interfaces are independent shapes on the main layer. Cell identifiers are unique and parent and connector references resolve. Reproducibility was reviewed at the design level.
 
+### 9. Fuse Merge tiles inside the slide move
+
+- **Date / commit:** 2026-11-26. `docs(architecture): fuse tiles inside the Merge slide move`.
+- **Tool:** Claude Code (Claude Opus 5.5).
+- **Prompt (faithful English paraphrase of successive requests):** Review the open pull request and my teammate's comments. For Merge, which step does the move perform and which does the resolution perform? Does it make sense for the move to fuse tiles? Apply what we agreed to the official diagram on a new branch.
+- **Discussion:** The instructor clarified that a Merge move slides a single tile, not the whole board. Claude Code noted that a collision decides where the tile stops, so fusing in the resolution would require the context to remember which tile moved and in which direction. It also noted that the generic `SlideMovement<TCellValue, TContext>` cannot double an arbitrary cell value, and recommended a Merge-specific move.
+- **Team decisions:** The move slides the tile and fuses it on collision with an equal tile, emitting `TilesMerged`. The resolution only spawns a new tile (2 or 4) and checks the end of the game. A fused tile cannot fuse again in the same move, so a move emits at most one `TilesMerged`. A move that changes nothing is invalid.
+- **Diagram delivery:** Renamed `SlideMovement` to `MergeSlideMovement` bound to `number`, `MergeContext` and the new `SlideTile` move (`origin` and `direction`). Updated `MergeResolution`, `MergeFactory`, the generic bindings note and the move proposal note, and added a note explaining the decision. The edit changed the XML text in place to keep existing identifiers and connectors.
+- **Verification:** The XML parsed successfully. The number of overlapping shapes stayed at seven, all pre-existing. The affected classes, the new dependency and the note were inspected in the draw.io viewer.
+- **Open points:** The movement still returns `ResolutionResult`, and `GameRules.applyMovement` still discards the events. The team has not yet agreed on how movement and resolution events are combined.
+
 ## Critical evaluation
 
 - **Approximate share of AI-assisted code:** _TODO_
