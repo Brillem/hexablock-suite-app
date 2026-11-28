@@ -2,6 +2,8 @@
 
 The team owns the design. Discuss the work with the user in Spanish. Write repository content in English, including specifications, agent profiles, code, test names, documentation, AI usage entries and commit messages. Keep existing source filenames exact when citing them. The current scope is the game core (domain and use cases). Discuss UI, persistence, networking and the backend when the team opens that scope.
 
+When coordinating work or resuming a chat, follow the [orchestrator guide](docs/ORCHESTRATOR.md).
+
 ## Project references
 
 Resolve the following paths from the root of the game client repository, `hexablock-suite-app`.
