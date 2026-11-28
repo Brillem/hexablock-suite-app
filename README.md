@@ -80,6 +80,7 @@ _TODO: describe the implemented aspects and the SOLID-based strategy (decorators
 ### Prerequisites
 
 - Flutter SDK 3.47.9 (stable channel), the same version CI uses
+- Node.js 22.12+ and npm (for Conventional Commit validation)
 - Android Studio (Android SDK) and/or Xcode (iOS) to run the app on a device or emulator
 
 The app targets Android and iOS. Application ID: `com.hexablocksuite.hexablock_suite`.
@@ -89,9 +90,13 @@ The app targets Android and iOS. Application ID: `com.hexablocksuite.hexablock_s
 ```bash
 git clone https://github.com/Brillem/hexablock-suite-app.git
 cd hexablock-suite-app
+npm install
 flutter pub get
 flutter run
 ```
+
+`npm install` installs the Git hooks. Commit messages that do not follow the Conventional Commits
+format are rejected by the `commit-msg` hook.
 
 ## Running Tests
 
